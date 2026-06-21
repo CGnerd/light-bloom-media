@@ -335,7 +335,6 @@
 							<h2>Get in touch</h2>
 							<p>Ready to tell your story? Whether you're planning a video project, event, campaign, or simply exploring ideas, I'd love to hear about your goals and discuss how Light Bloom Media can help.</p>
 							<form method="POST" action="https://formspree.io/f/mqevzwvq">
-  								<input type="hidden" name="_next" value="https://lightbloommedia.com/thank-you.html">
   								<input type="text" name="_gotcha" style="display:none">
   								<div class="fields">
   									<div class="field half">
@@ -412,6 +411,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>const form = document.querySelector('form');
+				form.addEventListener('submit', async (e) => {
+					e.preventDefault();
+
+			  const response = await fetch(form.action, {
+			    method: 'POST',
+			    body: new FormData(form),
+			    headers: {
+			      Accept: 'application/json'
+			    }
+			  });
+
+			  if (response.ok) {
+			    window.location.href = '/thank-you.html';
+			  } else {
+			    alert('Sorry, there was a problem sending your message. Please try again.');
+			  }
+			});
+			</script>
 
 	</body>
 </html>
