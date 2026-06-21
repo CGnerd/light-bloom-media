@@ -334,7 +334,32 @@
 						<div class="inner medium">
 							<h2>Get in touch</h2>
 							<p>Ready to tell your story? Whether you're planning a video project, event, campaign, or simply exploring ideas, I'd love to hear about your goals and discuss how Light Bloom Media can help.</p>
-							<form method="POST" action="/api/contact">
+							<form method="POST" action="https://formspree.io/f/mqevzwvq">
+  								<input type="hidden" name="_next" value="https://lightbloommedia.com/thank-you.html">
+  								<input type="text" name="_gotcha" style="display:none">
+  								<div class="fields">
+  									<div class="field half">
+      									<label for="name">Name</label>
+      										<input type="text" name="name" id="name">
+    								</div>
+    								<div class="field half">
+      									<label for="email">Email</label>
+							     		<input type="email" name="email" id="email">
+							    	</div>
+							    	<div class="field">
+							      		<label for="message">Message</label>
+							      		<textarea name="message" id="message" rows="6"></textarea>
+							    	</div>
+							  </div>
+							  <ul class="actions special">
+							    <li>
+							      <input type="submit" value="Send Message">
+							    </li>
+							  </ul>
+							</form>
+
+
+<!--
 								<div class="fields">
 									<div class="field half">
 										<label for="name">Name</label>
@@ -353,7 +378,7 @@
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-
+-->
 						</div>
 					</section>
 
