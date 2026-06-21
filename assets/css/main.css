@@ -8260,6 +8260,44 @@ input, select, textarea {
 		border-top-color: rgba(0, 0, 0, 0.2);
 	}
 
+	.about-container {
+	    display: flex;
+	    align-items: center;
+	    gap: 3rem;
+	    text-align: left;
+	    margin-top: 2rem;
+	}
+
+	.about-photo {
+	    width: 220px;
+	    height: 220px;
+	    border-radius: 50%;
+	    object-fit: cover;
+	    flex-shrink: 0;
+	    box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.15);
+	}
+
+	.about-text {
+	    flex: 1;
+	}
+
+	.about-text p:last-child {
+	    margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 736px) {
+	    .about-container {
+	        flex-direction: column;
+	        text-align: center;
+	    }
+
+	    .about-photo {
+	        width: 180px;
+	        height: 180px;
+	    }
+	}
+
+
 /* Wrapper */
 
 	#wrapper {
